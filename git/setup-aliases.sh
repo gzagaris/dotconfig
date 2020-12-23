@@ -4,10 +4,6 @@
 #
 #------------------------------------------------------------------------------
 echo "configuring git aliases..."
-baseDir=$1
-dir="$1/scripts/git"
-echo "Base Directory: $baseDir"
-echo "Git scripts location: $dir"
 
 ## shortcut for git config
 gconf="git config --global"
