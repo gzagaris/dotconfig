@@ -13,14 +13,14 @@ gconf="git config --global"
 ## Removes a tag both locally and on the remote (origin)
 ##
 ## Example: git delete-tag 3.9.260
-${gconf} alias.delete-tag "!bash -c \"git tag -d $1 && git push origin --delete $1\""
+${gconf} alias.delete-tag "!bash -c \"git tag -d \$1 && git push origin --delete \$1\""
 
 ## Usage: git delete-branch <branch>
 ##
 ## Removes a branch both locally and on the remote (origin)
 #
 ## Example: git delete-branch foo
-${gconf} alias.delete-branch "!bash -c \"git branch -d $1 && git push origin --delete $1\""
+${gconf} alias.delete-branch "!bash -c \"git branch -d \$1 && git push origin --delete \$1\""
 
 ## Usage: git make-patch <from-tag> <patch-file>
 ##
@@ -124,9 +124,10 @@ ${gconf} alias.default-branch "!bash -c \"git remote show origin | grep 'HEAD br
 ## Usage: git diff-stash [N]
 ##
 ## Diffs HEAD with the Nth entry of changes that was stashed
-${gconf} alias.diff-stash "difftool -d HEAD stash@{$1}"
+${gconf} alias.diff-stash "!bash -c \"git difftool -d HEAD stash@{\$1}\""
 
 ## Usage: git drop-stash [N]
 ##
 ## Drops the Nth entry from the stash
-${gconf} alias.drop-stash "stash drop stash@{$1}"
+${gconf} alias.drop-stash "!bash -c \"git stash drop stash@{\$1}\""
+
