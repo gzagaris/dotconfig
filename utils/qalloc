@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+#------------------------------------------------------------------------------
+# Copyright (c) 2021, Air Force Research Laboratory (AFRL)
+# Created by George Zagaris (gzagaris@us.af.mil).
+#
+# A script used to streamline getting an interactive shell through PBS
+#------------------------------------------------------------------------------
+
+reset=$(tput sgr0)
+bold=$(tput bold)
+
+#------------------------------------------------------------------------------
+# HELPER FUNCTIONS
+#------------------------------------------------------------------------------
+function info() {
+  echo "$bold[INFO]:$reset $1"
+}
+
+function error() {
+  echo "$bold[ERROR]:$reset $1"
+  exit 1
+}
+
+function show_help() {
+  echo
+  echo -e "$bold SYNOPSIS $reset"
+  echo -e "\t Gets an interactive shell through PBS."
+  echo 
+  echo -e "$bold Basic Usage:$reset qalloc -N <nodes> -n <ranks> [-t HH:MM:SS]"
+}
+
+#------------------------------------------------------------------------------
+# MAIN 
+#------------------------------------------------------------------------------
+nnodes=1
+ncores=1
+nranks=1
+wltime="01:00:00"
+queue="debug"
+
+while [ "$#" -gt 0 ]
+do
+    case "$1" in
+         -h|--help)
+             show_help
+             exit 0
+             ;;
+        -q)
+            queue="$2"
+            shift
+            ;;
+        -t)
+            wltime="$2"
+            shift
+            ;;
+        -N|--nnodes)
+             nnodes="$2"
+             shift
+             ;;
+        -n|--ncores)
+            ncores="$2"
+            nranks="$2"
+            shift
+            ;;
+        -mpiranks)
+            nranks="$2"
+            shift
+            ;;
+         *)
+             error "invalid option [$1]! Try running --help for more info." 
+    esac
+    shift
+done
+
+qsub_cmd="qsub -q $queue -lselect=$nnodes:ncpus=$ncores:mpiprocs=$nranks -lwalltime=$wltime -I"
+info "running [$qsub_cmd]"
+eval $qsub_cmd
+
+exit
