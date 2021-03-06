@@ -1,0 +1,9 @@
+# File: $HOME/.ssh/config
+#
+# The following settings aim at keep ssh connections up longer
+# and to avoid broken pipe errors
+#
+Host *
+  ServerAliveInterval 30
+  ServerAliveCountMax 5
+  TCPKeepAlive yes
