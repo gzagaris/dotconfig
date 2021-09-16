@@ -8,6 +8,13 @@ echo "configuring git aliases..."
 ## shortcut for git config
 gconf="git config --global"
 
+## Usage git default-branch <remote>
+##
+## Returns the name of the default branch, e.g., develop, master, main or other
+##
+## Example: git default-branch origin
+${gconf} alias.default-branch "!bash -c \"git remote show \$1 | awk '/HEAD branch/ {print $NF}'\""
+
 ## Usage: git delete-tag <tag>
 ##
 ## Removes a tag both locally and on the remote (origin)
