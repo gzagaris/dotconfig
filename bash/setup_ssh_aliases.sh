@@ -5,7 +5,7 @@ reset=$(tput sgr0)
 green=$(tput setaf2)
 check="$green o $reset"
 
-BASH_ALIASES="$HOME/.dotconfig/bash/ssh_aliases.sh"
+BASH_ALIASES="$HOME/.dotconfig/bash/ssh-aliases.sh"
 BASH_RC_FILE="$HOME/.bashrc"
 BASH_PROFILE_FILE="$HOME/.profile"
 TARGET_FD=""
