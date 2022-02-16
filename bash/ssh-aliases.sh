@@ -28,6 +28,11 @@ alias warhawk="ssh gzagaris@warhawk.afrl.hpc.mil"
 alias warhawk-mount="sshfs gzagaris@warhawk.afrl.hpc.mil:/p/home/gzagaris ~/REMOTES.d/warhawk"
 alias warhawk-umount="umout -f ~/REMOTES.d/warhawk"
 
+# [blackbird]
+alias blackbird="ssh gzagaris@blackbird.afrl.hpc.mil"
+alias blackbird-mount="sshfs gzagaris@blackbird.afrl.hpc.mil:/p/home/gzagaris ~/REMOTES.d/blackbird"
+alias blackbird-umount="umout -f ~/REMOTES.d/blackbird"
+
 # [ascent]
 alias ascent="ssh gzagaris@login1.ascent.olcf.ornl.gov"
 alias ascent-mount="sshfs gzagaris@login1.ascent.olcf.ornl.gov:/ccsopen/home/gzagaris ~/REMOTES.d/ascent"
