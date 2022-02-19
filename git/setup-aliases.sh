@@ -58,8 +58,8 @@ ${gconf} alias.unstage "reset HEAD --"
 ##    git outgoing <branch>
 ##
 ## Lists incoming/outgoing commits from the current branch to svn/trunk.
-${gconf} alias.incoming "!bash -c \"git fetch origin && git log --pretty=format:'%C(bold)%h%Creset %s %C(ul)(%an)%Creset' HEAD..origin/$1\""
-${gconf} alias.outgoing "!bash -c \"git fetch origin && git log --pretty=format:'%C(bold)%h%Creset %s %C(ul)(%an)%Creset' origin/$1..HEAD\""
+${gconf} alias.incoming "!bash -c \"git fetch origin && git log --pretty=format:'%C(bold)%h%Creset %s %C(ul)(%an)%Creset' HEAD..origin/\$1\""
+${gconf} alias.outgoing "!bash -c \"git fetch origin && git log --pretty=format:'%C(bold)%h%Creset %s %C(ul)(%an)%Creset' origin/\$1..HEAD\""
 
 ## Usage: git history
 ##
