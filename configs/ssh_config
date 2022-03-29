@@ -7,3 +7,7 @@ Host *
   ServerAliveInterval 30
   ServerAliveCountMax 5
   TCPKeepAlive yes
+
+# Use IpV43 for all dren.mil hosts
+Host *.dren.mil
+  AddressFamily inet
