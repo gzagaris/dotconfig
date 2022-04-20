@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "cmake.configureOnOpen": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 1,
+    "editor.rulers":[80],
+    "files.insertFinalNewLine": true,
+    "workbench.colorCustomizations": {    
+      "editorWhitespace.foreground": "#fbff00"
+     }
+}
