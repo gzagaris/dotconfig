@@ -4,17 +4,18 @@
 
 ## list files in style
 ## NOTE: assumes GNU ls (i.e., this doesn't with BSD ls)
-alias ls="ls --color='always'"
+lscmd="$(command -v lsd)" || lscmd="ls"
+alias ls="$lscmd --color='always'"
 
 ## list files in columnds with other info
 alias ll="ls -lha"
 
-## a better `mkdir` make parent directories as needed
-alias mkdir="mkdir -pv"
-
 ## list files sorted by size
 ## NOTE: assumes GNU ls (i.e., this doesn't work with BSD ls)
-alias lt='ls --human-readable --size -l -S --classify'
+alias lt='ls --human-readable --size=default -l -S --classify'
+
+## a better `mkdir` make parent directories as needed
+alias mkdir="mkdir -pv"
 
 ## grep with style (color codes what you're grepping for)
 alias grep='grep --color=auto'
