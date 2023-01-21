@@ -8,6 +8,11 @@ echo "configuring git aliases..."
 ## shortcut for git config
 gconf="git config --global"
 
+## Usage: git submodule-update-all
+##
+## Updates all Git submodules in the repository recursively.
+${gconf} alias.submodule-update-all "submodule update --init --recursive"
+
 ## Usage git default-branch <remote>
 ##
 ## Returns the name of the default branch, e.g., develop, master, main or other
