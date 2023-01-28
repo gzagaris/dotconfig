@@ -1,4 +1,7 @@
-# File: $HOME/.ssh/config
+#
+# SSH configuration
+#
+
 #
 # The following settings aim at keep ssh connections up longer
 # and to avoid broken pipe errors
@@ -8,6 +11,54 @@ Host *
   ServerAliveCountMax 5
   TCPKeepAlive yes
 
-# Use IpV43 for all dren.mil hosts
 Host *.dren.mil
-  AddressFamily inet
+    AddressFamily inet
+
+#
+# DoD HPCMP DSRC Systems (requires Kerberos SSH)
+#
+Host narwhal
+    HostName narwhal.navydsrc.hpc.mil
+    User gzagaris
+
+
+Host onyx
+    HostName onyx.erdc.hpc.mil
+    User gzagaris
+
+Host scout
+    HostName scout.arl.hpc.mil
+    User gzagaris
+
+Host warhawk
+    HostName warhawk.afrl.hpc.mil
+    User gzagaris
+
+#
+# DoD NRL Systems (requires NRL VPN + Kerberos SSH)
+#
+
+Host mayhem
+    HostName mayhem.lcp.nrl.navy.mil
+    User gzagaris
+
+Host kermit
+    HostName kermit.lcp.nrl.navy.mil
+    User gzagaris
+
+#
+# DoD HPCMP CREATE Systems
+#
+
+Host rickon
+    HostName rickon.create.hpc.mil
+    User gzagaris
+
+Host bran.create.hpc.mil
+    HostName bran.create.hpc.mil
+    User gzagaris
+
+Host gl.create.hpc.mil
+    HostName gl.create.hpc.mil
+    User git
+    ProxyJump bran.create.hpc.mil
