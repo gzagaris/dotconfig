@@ -13,4 +13,3 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10
 echo "${bold}[INFO]${reset}: seed .zshrc"
 echo "source ~/.powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
 
-

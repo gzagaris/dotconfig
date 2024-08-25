@@ -16,4 +16,3 @@ echo ""                             >> $ZSHRC_FILE
 echo "## [.dotconfig]"              >> $ZSHRC_FILE
 echo "## setup zsh-autosuggestions" >> $ZSHRC_FILE
 echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> $ZSHRC_FILE
-source ~/.zshrc
