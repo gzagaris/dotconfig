@@ -17,10 +17,21 @@ Host *.dren.mil
 #
 # DoD HPCMP DSRC Systems (requires Kerberos SSH)
 #
+Host ruth
+    HostName ruth.arl.hpc.mil
+    User gzagaris
+
+Host nautilus
+    HostName nautilus.navydsrc.hpc.mil
+    User gzagaris
+
+Host raider
+    HostName raider.afrl.hpc.mil
+    User gzagaris
+
 Host narwhal
     HostName narwhal.navydsrc.hpc.mil
     User gzagaris
-
 
 Host onyx
     HostName onyx.erdc.hpc.mil
@@ -59,6 +70,6 @@ Host bran.create.hpc.mil
     User gzagaris
 
 Host gl.create.hpc.mil
-    HostName gl.create.hpc.mil
+    HostName gl.internal
     User git
     ProxyJump bran.create.hpc.mil
