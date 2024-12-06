@@ -5,7 +5,7 @@ reset=$(tput sgr0)
 
 CURRENT_DIR=`pwd`
 cd $HOME
-echo "workding directory$bold[$HOME]$reset"
+echo "workding directory${bold}[$HOME]${reset}"
 
 echo "$bold[INFO]$reset: cloning zsh-autosuggestions..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
