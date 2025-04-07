@@ -48,6 +48,11 @@ ${gconf} alias.make-patch "!bash -c \"git format-patch \$1 --stdout > \$2\""
 ## Applies the given patch to the current branch
 ${gconf} alias.apply-patch "!bash -c \"git apply --check \$1 && git am --signoff < \$1\""
 
+## Usage: git branch-name
+##
+## Prints the name of the current branch
+${gconf} alias.branch-name "rev-parse --abbrev-ref HEAD"
+
 ## Usage: git hall-of-fame
 ##
 ## Lists all authors ranked by number of commits
