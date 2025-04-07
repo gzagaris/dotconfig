@@ -10,6 +10,8 @@ Host *
   ServerAliveInterval 30
   ServerAliveCountMax 5
   TCPKeepAlive yes
+  ForwardAgent yes
+  ForwardX11 yes
 
 Host *.dren.mil
     AddressFamily inet
@@ -65,6 +67,22 @@ Host rickon
     HostName rickon.create.hpc.mil
     User gzagaris
 
+Host derek
+    HostName derek.create.hpc.mil
+    User gzagaris
+
+Host cindy
+    HostName cindy.create.hpc.mil
+    User gzagaris
+
+Host gigi
+    HostName gigi.create.hpc.mil
+    User gzagaris
+
+Host tyra
+    HostName tyra.create.hpc.mil
+    User gzagaris
+
 Host bran.create.hpc.mil
     HostName bran.create.hpc.mil
     User gzagaris
@@ -73,3 +91,11 @@ Host gl.create.hpc.mil
     HostName gl.internal
     User git
     ProxyJump bran.create.hpc.mil
+
+#
+# DoD MHPCC Systems
+#
+
+Host coral
+    HostName coral1.mhpcc.hpc.mil
+    User gzagaris
